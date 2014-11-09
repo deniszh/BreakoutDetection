@@ -4,8 +4,8 @@ breakout = function(Z, min.size = 30, method = 'amoc', ...){
 	f = function(x) (x-min(x))/(max(x)-min(x))
 	
 	
-	Zcounts = f(Z)
-	#Zcounts = f(Z$count)
+	#Zcounts = f(Z)
+	Zcounts = f(Z$count)
 	
 	#capture additional passed arguments
 	argList = list(...)
