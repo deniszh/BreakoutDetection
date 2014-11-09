@@ -3,10 +3,9 @@ breakout = function(Z, min.size = 30, method = 'amoc', ...){
 	#function used to scale observations to the interval [0,1]
 	f = function(x) (x-min(x))/(max(x)-min(x))
 	
-	if(class(Z)%in%c('numeric','integer') || ncol(Z) == 1)
-		Zcounts = f(Z)
-	else
-		Zcounts = f(Z$count)
+	
+	Zcounts = f(Z)
+	#Zcounts = f(Z$count)
 	
 	#capture additional passed arguments
 	argList = list(...)
