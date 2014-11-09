@@ -5,8 +5,6 @@ breakout = function(Z, min.size = 30, method = 'amoc', ...){
 	
 	if(class(Z)%in%c('numeric','integer') || ncol(Z) == 1)
 		Zcounts = f(Z)
-	else if(!('timestamp'%in%names(Z) && 'count'%in%names(Z)))
-		stop("The supplied data must either be a vector, or a data.frame which has columns named 'timestamp' and 'count'.")
 	else
 		Zcounts = f(Z$count)
 	
